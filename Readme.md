@@ -11,8 +11,8 @@ A person can simply press a button and start talking into a microphone and ask w
 ## Tools
 - INMP441 microphone
 - S7-1200 PLC (In our case we used TIA Portal)
-- ESP32
-- Any micro SD card slot module(preferred)
+- ESP32 microcontroller
+- Any micro SD card slot module and a SD card(preferred)
 - I2S Stereo Decoder (UDA1334A), if you need a real-time feedback from LLM. 
 
 
