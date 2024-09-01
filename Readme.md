@@ -4,16 +4,16 @@
 
 # Project Title
 
-A brief description of what this project does and who it's for comes here.
-
+AI voice assistant to manage PLC and HMI panels.
+This project is aiming to assist people who are not familiar with PLC tags. 
+A person can talk into a microphone and ask what they want to do and the task is automatically done (if it's previously programmed and defined in the PLC)
 
 ## Tools
-In this section, you should mention the hardware or simulators utilized in your project.
-- Qemu
-- Gem5
+- INMP441 microphone
+- S7-1200 PLC (In our case we used TIA Portal)
 - ESP32
-- Raspberry Pi 3B
-- Temperature Sensor
+- Any micro SD card slot module(preferred)
+- I2S Stereo Decoder (UDA1334A), if you need a real-time feedback from LLM. 
 
 
 ## Implementation Details
