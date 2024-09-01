@@ -6,7 +6,7 @@
 
 AI voice assistant to manage PLC and HMI panels.
 This project is aiming to assist people who are not familiar with PLC tags. 
-A person can talk into a microphone and ask what they want to do and the task is automatically done (if it's previously programmed and defined in the PLC)
+A person can simply press a button and start talking into a microphone and ask what they want to do and the task is automatically done. (if it's previously programmed and defined in the PLC)
 
 ## Tools
 - INMP441 microphone
