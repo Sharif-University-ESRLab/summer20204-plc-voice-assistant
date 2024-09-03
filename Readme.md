@@ -18,10 +18,12 @@ A person can simply press a button and start talking into a microphone and ask w
 
 ## Implementation Details
 
-In this section, you will explain how you completed your project. It is recommended to use pictures to demonstrate your system model and implementation.
-
-
-Feel free to use sub-topics for your projects. If your project consists of multiple parts (e.g. server, client, and embedded device), create a separate topic for each one.
+Our implementation consists of 5 parts:
+#### Programming PLC
+#### Arduino code
+#### Python script for voice processing
+#### Python script for connecting PLC to server
+#### Python script to receive .wav file from FSBrowser and send it server
 
 ## How to Run
 
