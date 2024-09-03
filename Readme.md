@@ -51,12 +51,19 @@ Your voice assistant is ready to use. From now on all you have to do is press th
 
 ## Results
 In Arduino IDE:
+
 ![image](https://github.com/user-attachments/assets/f67ce5ca-5c2c-41f5-bba0-47f0af7ad277)
+
 In Client:
+
 ![image](https://github.com/user-attachments/assets/880bbb39-0039-45f1-beda-4bdb82c61acc)
+
 In Server:
+
 ![image](https://github.com/user-attachments/assets/c35b4913-de9e-49c3-a0e7-b7c7120e1132)
+
 Audio files you're expected to see:
+
 ![image](https://github.com/user-attachments/assets/ef881693-a367-40e4-886e-4d0971965bca)
 
 
