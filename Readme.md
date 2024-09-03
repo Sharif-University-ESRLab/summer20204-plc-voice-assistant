@@ -76,7 +76,7 @@ Some links related to your project come here.
 
 ## Authors
 Authors and their github link come here.
-- [@Author1](https://github.com/Sina-Moshtaghyun)
-- [@Author2](https://github.com/ArefeBoushehrian)
-- [@Author3](https://github.com/hamidalipour)
+- [@Sina Moshtaghyun](https://github.com/Sina-Moshtaghyun)
+- [@Arefe Boushehrian](https://github.com/ArefeBoushehrian)
+- [@Hamidreza Alipour](https://github.com/hamidalipour)
 
