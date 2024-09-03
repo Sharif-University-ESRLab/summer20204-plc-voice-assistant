@@ -19,49 +19,57 @@ A person can simply press a button and start talking into a microphone and ask w
 ## Implementation Details
 
 Our implementation consists of 5 parts:
-#### Programming PLC
-#### Arduino code
-#### Python script for voice processing
-#### Python script for connecting PLC to server
-#### Python script to receive .wav file from FSBrowser and send it server
+#### Programming PLC:
+First we wrote a simple program in Ladder that has 3 tags "turn_on_light", "turn_off_light" and "light"
+
+#### Arduino code:
+For our arduino program we wrote a code that gets the input audio from INPM441 microphone, makes a .wav file and uploads it on FSBrowser so we can download it in the server.
+
+#### Python script for voice processing:
+In the server side we have a python script that receives the wav file, converts the audio to text using gstt library then makes the a Chat-gpt prompt and sends the prompt to chat-gpt via Openai API and extracts the PLC command from it then makes an audio file using gtts to read the feedback for user.
+
+#### Python script for connecting PLC to server:
+We also connect to PLC via ethernet which is implemented in this script.
+
+#### Python script to receive .wav file from FSBrowser and send it server:
+This script downloads the .wav file from FSBrowser and sends it to server.
+
 
 ## How to Run
-
-In this part, you should provide instructions on how to run your project. Also if your project requires any prerequisites, mention them. 
-
-#### Examples:
-#### Build Project
-Your text comes here
+First you have to connect the ESP32 to your PC and upload the .ino file to it. After you successfully uploaded the code in Arduino IDE you'll see that your voice is getting recorded for 15 seconds. When it's done you'll see an url which your .wav file is available on. Copy the url and replace it with the value of "audio_url" in the Client code.
+Now you have to run the server. Navigate to the directory which you have your Server.py file and run the following command in cmd:
 ```bash
-  build --platform=OvmfPkg/OvmfPkgX64.dsc --arch=X64 --buildtarget=RELEASE --tagname=GCC5
+  pyhton Server.py
 ```
-
-#### Run server
-Your text comes here
+then copy the server ip and port and replace it with the "SERVER_URL" value in the Client code.
+Open another cmd, navigate to Client.py directory and run this command and follow the instruction:
 ```bash
-  pyhton server.py -p 8080
+  pyhton Client.py
 ```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `-p` | `int` | **Required**. Server port |
-
-
+Now you have to find the PLC ip address in your network and replace it with the value of "ip" in Connecting_to_plc file and run the script.
+Your voice assistant is ready to use. From now on all you have to do is press the EN button on the EPS32, start talking and do the Client instruction.(download and send)
 
 ## Results
-In this section, you should present your results and provide an explanation for them.
+In Arduino IDE:
+![image](https://github.com/user-attachments/assets/f67ce5ca-5c2c-41f5-bba0-47f0af7ad277)
+In Client:
+![image](https://github.com/user-attachments/assets/880bbb39-0039-45f1-beda-4bdb82c61acc)
+In Server:
+![image](https://github.com/user-attachments/assets/c35b4913-de9e-49c3-a0e7-b7c7120e1132)
+Audio files you're expected to see:
+![image](https://github.com/user-attachments/assets/ef881693-a367-40e4-886e-4d0971965bca)
 
-Using image is required.
 
 ## Related Links
 Some links related to your project come here.
- - [EDK II](https://github.com/tianocore/edk2)
+ - [INMP441 Pinout](https://invensense.tdk.com/wp-content/uploads/2015/02/INMP441.pdf)
  - [ESP32 Pinout](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
- - [Django Doc](https://docs.djangoproject.com/en/5.0/)
+ - [flask Doc](https://flask.palletsprojects.com/en/3.0.x/)
 
 
 ## Authors
 Authors and their github link come here.
-- [@Author1](https://github.com/Sharif-University-ESRLab)
-- [@Author2](https://github.com/Sharif-University-ESRLab)
+- [@Author1](https://github.com/Sina-Moshtaghyun)
+- [@Author2](https://github.com/ArefeBoushehrian)
+- [@Author3](https://github.com/hamidalipour)
 
